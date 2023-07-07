@@ -4,81 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mess calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <h2>Mess calculator</h2>
+    <div id="top_heading">Mess calculator</div>
     
     <!-- top container -->
 
     <section class="top_container">
         <!-- enter total amount spend -->
-        <div class="total_amount_container">
-            <label for="total_amount" class="total_amount_label">Amount</label>
-            <input type="number" name="total_amount" id="total_amount" placeholder="enter total amount spend">
+        <div class="total_amount_container upper">
+            <label for="total_amount" class="total_amount_label upper_label">Amount</label>
+            <input type="number" name="total_amount" class="upper_input" id="total_amount" placeholder="enter total amount spend">
         </div>
         <!-- enter total number of days of meal happened -->
-        <div class="total_days_container">
-            <label for="total_days" class="total_days_label">Total Days</label>
-            <input type="number" name="total_days" id="total_days" placeholder="enter total days meal happened">
+        <div class="total_days_container upper">
+            <label for="total_days" class="total_days_label upper_label">Total Days</label>
+            <input type="number" name="total_days" class="upper_input" id="total_days" placeholder="enter total days meal happened">
         </div>
         <!-- enter guest meal charge -->
-        <div class="guest_meal_container">
-            <label for="guest_meal_rate">Guest meal rate</label>
-            <input type="number" name="guest_meal_rate" id="guest_meal_rate" placeholder="enter guest meal rate">
+        <div class="guest_meal_container upper">
+            <label for="guest_meal_rate" class="guest_meal_rate_label  upper_label">Guest meal rate</label>
+            <input type="number" name="guest_meal_rate" class="upper_input" id="guest_meal_rate" placeholder="enter guest meal rate">
         </div>
     </section>
 
-    <!-- left side container -->
-    <section class="left_side_container">
-        <div class="headings">
-            <p>Name</p>
-            <p>Meal type</p>
-            <p>Number of meals</p>
-            <p>Extra guest meal</p>
-            <p>Monthly meal cost</p>
-        </div>
-        <div id="main_content" class="main_content">
-            <div id="row-" class="row">
-                <p class="member_name">Aditya</p>
-                <select name="meal options" class="meal_options">
-                    <option value="guest meal">guest meal</option>
-                    <option value="bound">bound meal</option>
-                </select>
-                <input type="number" name="member_meal_count" class="member_meal_count" placeholder="total meals">
-                <input type="number" name="member_extra_meal" class="member_extra_meal" placeholder="extra meals">
-                <div class="output_meal_cost"></div>
+    <section class="main_container">
+        <!-- left side container -->
+        <section class="left_side_container">
+            <div class="headings">
+                <p>Name</p>
+                <p>Meal type</p>
+                <p>Number of meals</p>
+                <p>Extra guest meal</p>
+                <p>Monthly meal cost</p>
             </div>
-        </div>
-    </section>
+            <div id="main_content" class="main_content">
+                
+                <div id="row-1" class="row">
+                    <p class="member_name">Aditya</p>
+                    <select name="meal options" class="meal_options" onchange="handleSelection(this)">
+                        <option value="guest meal">guest meal</option>
+                        <option value="bound">bound meal</option>
+                    </select>
+                    <input type="number" name="member_meal_count" class="member_meal_count" placeholder="total meals">
+                    <input type="number" name="member_extra_meal" class="member_extra_meal" placeholder="extra meals">
+                    <div class="output_meal_cost">-</div>
+                </div>
+            </div>
+        </section>
 
-    <section class="right_side">
-        <!-- Submit -->
-        <div>
-            <input type="button" value="Submit">
-        </div>
-        <!-- Bound Meal -->
-        <div class="bound_meal_count_container">
-            <p>Bound Meal Count</p>
-            <div></div>
-        </div>
-        <!-- Meal charge -->
-        <div class="meal_charge_container">
-            <p>Meal charge</p>
-            <div></div>
-        </div>
-        <!-- guest meal payer -->
-        <div class="guest_meal_payers_container">
-            <p>Guest Meal Payers</p>
-            <p>Number of meals</p>
-            <p>Guest meal amount</p>
-            <div class="guest_meal_payers_content">
-                <div class="guest_meal_payers_member_name"></div>
-                <div class="guest_meal_count"></div>
-                <div class="guest_meal_total_amount"></div>
+        <section class="right_side">
+            <!-- Submit -->
+            <div class="submit_container">
+                <input type="button" value="Submit" class="Submit">
             </div>
-        </div>
+            <!-- Bound Meal -->
+            <div class="bound_meal_count_container">
+                <p>Bound Meal Count</p>
+                <div id="bound_meal_count_output">-</div>
+            </div>
+            <!-- Meal charge -->
+            <div class="meal_charge_container">
+                <p>Meal charge</p>
+                <div id="meal_charge_output">-</div>
+            </div>
+            <!-- guest meal payer -->
+            <div class="guest_meal_payers_container">
+                
+                <div class="outer_guest_meal">
+                    <div class="down_topics">
+                        <p>Guest Meal</p>
+                        <p>meals</p>
+                        <p>amount</p>
+                    </div>
+                    <div class="guest_meal_payers_content">
+                        <div class="guest_meal_payers_member_name">-</div>
+                        <div class="guest_meal_count">-</div>
+                        <div class="guest_meal_total_amount">-</div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
     </section>
+    
 
 </body>
 

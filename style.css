@@ -1,0 +1,240 @@
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+body{
+    background-color: #f3f3f3;
+    color: #444;
+    height: 100vh;
+}
+[placeholder]{
+    text-align: center;
+}
+
+#top_heading{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.top_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.upper{
+    flex: 1;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    flex-direction: column;
+    background-color: bisque;
+    margin: 0 15px 0 15px;
+    border-radius: 10px;
+}
+
+.total_amount_container{
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+}.total_days_container{
+    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}.guest_meal_container{
+    background: rgb(97,116,240);
+    background: linear-gradient(112deg, rgba(97,116,240,1) 0%, rgba(46,73,249,1) 100%);
+}
+
+.upper_input{
+    margin: 5px;
+    width: 75%;
+    height: 50%;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.upper_input:focus{
+    outline: none;
+}
+
+#total_amount{
+    background: #b7de95;
+    border: #b7de95;
+}
+#total_amount:focus{
+    background: #cfe9b7;
+}
+#total_days{
+    background: #f7a8ac;
+    border: #f7a8ac;
+}
+#total_days:focus{
+    background: #f7c3c6;
+}
+#guest_meal_rate{
+    background: #9dbefa;
+    border: #9dbefa;
+}
+#guest_meal_rate:focus{
+    background-color: #c0d5fa;
+    outline: none;
+    border: rgba(97,116,240,0);
+}
+
+.upper_label{
+    font-size: 30px;
+}
+.guest_meal_rate_label{
+    font-size: 26px;
+    padding: 2px;
+}
+
+
+/* middle section */
+
+.main_container{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    margin: 15px;
+}
+.left_side_container{
+    width: 65vw;
+    height: 100%;
+}
+.right_side_container{
+    width: 35vw;
+    height: 100%;
+}
+
+.headings{
+    display: flex;
+}
+.headings p{
+    flex: 1;
+}
+
+.main_content{
+    height: 68vh;
+    overflow: scroll;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px dotted #ccc;
+}
+.member_name,.meal_options,.member_meal_count,.member_extra_meal,.output_meal_cost{
+    flex: 1;
+    width: 20%;
+    
+}
+.row:nth-child(2n+0){
+    background-color: #f7f7f7;
+}
+.row:hover{
+    background-color: #c9d0fb;
+}
+
+
+/* right side */
+
+.right_side_container{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.submit_container{
+    width: 20vw;
+    height: 17%;
+    margin-bottom: 10px;
+}
+.bound_meal_count_container{
+    height: 17%;
+    background: pink;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+}
+.meal_charge_container{
+    height: 17%;
+    display: flex;
+    background-color: rgb(219, 164, 27);
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.guest_meal_payers_container{
+    height: 44%;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit_container input{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(25, 128, 25); */
+    background-color: rgb(39, 188, 39);
+    border: solid rgb(39, 188, 39) 5px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #ddd;
+}
+.submit_container input:hover{
+    background-color: rgb(25, 128, 25);
+    border: rgb(25,128,25);
+    color: #fff;
+    cursor: pointer;
+}
+
+.bound_meal_count_container p{
+    /* padding: 5px; */
+}
+
+.meal_charge_container p{
+    /* padding: 5px; */
+}
+
+/* right down */
+.down_topics{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(183, 112, 249);
+}
+.down_topics p{
+    width: 33%;
+}
+.outer_guest_meal{
+    
+    overflow: scroll;
+    height: 100%;
+}
+.guest_meal_payers_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+.guest_meal_payers_content div{
+    width: 33%;
+    border: 1px dotted rgb(209, 166, 250);
+}
+
